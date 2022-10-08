@@ -30,13 +30,13 @@ function display(products) {
   for (var i = 0; i < products.length; i++) {
     var product = products[i];
     html += `
-    <a class="product-info col-3" href="https://shopee.vn/product/163522870/10766042505?utm_campaign=-&utm_content=5ff8138f4a305433ea42cd92-633614116dae7c0d92767d05-gg%2Badwords--&utm_medium=affiliates&utm_source=an_171376300004">
+    <a class="product-info col-3 animate__animated animate__bounce animate__fadeInUp wow" href=${product.url}>
       <div class="product-item">
         <div>
           <img src="${product.img}" class="imgFluid"/>
         </div>
         <div class="blog-info">
-          <p class="blog-text">${product.comment}</p>
+          <div class="blog-text">${product.name}</div>
         </div>
       </div>
     </a>

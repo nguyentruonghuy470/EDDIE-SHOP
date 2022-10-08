@@ -83,13 +83,21 @@ a {
   height: 100%;
   object-fit: cover;
 }
-.profiledesktopMode p {
+.profiledesktopMode {
   height: 140px;
+}
+.txtThanks {
+  line-height: 1.625rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.profiledesktopMode p {
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 0.875rem;
 }
 .Profile_channelIcons {
+  align-items: center;
   display: flex;
   justify-content: center;
 }
@@ -106,7 +114,7 @@ a {
   height: 50px;
   top: calc(50% - 30px);
   background: rgba(0, 0, 0, 0.2);
-  transform: translate(0, -50%);
+  transform: translate(0, -10%);
 }
 /*  */
 .resp-tabs-list li {
@@ -159,11 +167,14 @@ p {
   height: 100%;
   padding: 10px;
 }
-.blog-info p {
+.blog-info .blog-text {
+  display: flex;
   height: 100%;
   overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
   text-overflow: ellipsis;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24.5px;
   color: var(--text-color);
   margin-top: 15px;
@@ -173,17 +184,16 @@ p {
   min-width: 100%;
 }
 .blog-info {
-  height: 75px;
+  height: 48px;
   background: #fff;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .product-info img {
   width: 100%;
-  height: 316px;
+  height: 100%;
   object-fit: cover;
   transition: 0.3s ease-in-out;
-  filter: grayscale(1);
 }
 .product-item {
   padding: 10px;
@@ -191,21 +201,63 @@ p {
   transition: 0.3s ease-in;
   border-radius: var(--card-curve);
 }
-.product-item:hover .blog-info {
-  transform: translateY(-1.5rem);
-  height: auto;
-}
+
 .product-item:hover {
   box-shadow: var(--card-hover-box-shadow);
   transform: var(--transformY);
 }
 .product-item:hover img {
   overflow: hidden;
-  filter: grayscale(0);
   transition: 0.3s ease-in-out;
 }
 
+.containerPolicy {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.containerPolicy img {
+  height: 650px;
+}
 /*  */
-.containerSearch{
+.containerSearch {
   padding: 30px;
+}
+/*  */
+@media screen and (max-width: 1200px) {
+  .carousel {
+    display: none;
+  }
+}
+@media screen and (max-width: 997px) {
+  .slider {
+    flex-direction: column;
+  }
+  .carousel {
+    display: none;
+  }
+  .product-info {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider {
+    flex-direction: column;
+  }
+  .carousel {
+    display: none;
+  }
+  .product-info {
+    width: 50%;
+  }
+  .row {
+    flex-direction: column-reverse;
+  }
+  .resp-tabs-list li {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
 }
