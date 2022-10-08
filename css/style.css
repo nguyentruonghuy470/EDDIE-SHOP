@@ -259,5 +259,7 @@ p {
     font-weight: 700;
     font-size: 15px;
   }
-
+  .profileAvatar {
+    width: 130px;
+  }
 }
